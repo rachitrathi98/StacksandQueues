@@ -4,9 +4,14 @@ namespace StacksandQueues
 {
     class Program
     {
-        static void Main(string[] args)
+       public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Welcome to Stacks and Queues using Linked List");
+            LinkedListStack stack = new LinkedListStack();
+            stack.Push(70);
+            stack.Push(30);
+            stack.Push(56);
+            stack.Display();
         }
     }
 }
