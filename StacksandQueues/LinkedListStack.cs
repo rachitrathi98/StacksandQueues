@@ -29,6 +29,34 @@ namespace StacksandQueues
 
         }
         /// <summary>
+        /// Peek the element from the stack
+        /// </summary>
+        public void Peek()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("Stack is Empty");
+                return;
+            }
+            Console.WriteLine("Element peeked is {0}", this.head.data);
+        }
+
+        /// <summary>
+        /// Pop the element from the stack
+        /// </summary>
+        public void Pop()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("Stack is Empty");
+                return;
+            }
+            Node temp = this.head;
+            int pop = temp.data;
+            this.head = temp.next;
+            Console.WriteLine("Popped element is {0}", pop);
+        }
+        /// <summary>
         /// Displays the stack elements
         /// </summary>
         public void Display()
@@ -43,6 +71,20 @@ namespace StacksandQueues
             }
             Console.WriteLine();
 
+        }
+        /// <summary>
+        /// Determines whether the stack is Empty
+        /// </summary>
+        /// <returns>
+        ///   <c>true</c> if this instance is empty; otherwise, <c>false</c>.
+        /// </returns>
+        public bool IsEmpty()
+        {
+            if (this.head == null)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }
