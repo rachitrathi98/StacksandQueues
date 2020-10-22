@@ -24,6 +24,11 @@ namespace StacksandQueues
             queue.Enqueue(30);
             queue.Enqueue(70);
             queue.Display();
+            while (!queue.IsEmpty())
+            {
+                queue.Dequeue();
+                queue.Display();
+            }
         }
     }
 }

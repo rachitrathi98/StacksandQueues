@@ -30,6 +30,22 @@ namespace StacksandQueues
             Console.WriteLine("Inserted into queue " + new_node.data);
         }
         /// <summary>
+        /// Dequeues the element from the queueu
+        /// </summary>
+        public void Dequeue()
+        {
+            // If queue is empty, return NULL.  
+            if (this.head == null)
+            {
+                Console.WriteLine("The Queue is empty");
+                return;
+            }
+            Node temp = this.head;
+            this.head = this.head.next;
+
+            Console.WriteLine("\nItem deleted is {0}", temp.data);
+        }
+        /// <summary>
         /// Displays the Queue
         /// </summary>
         public void Display()
@@ -48,6 +64,20 @@ namespace StacksandQueues
                     temp = temp.next;
                 }
             }
+        }
+        /// <summary>
+        /// Determines whether the Queue is Empty
+        /// </summary>
+        /// <returns>
+        ///   <c>true</c> if this instance is empty; otherwise, <c>false</c>.
+        /// </returns>
+        public bool IsEmpty()
+        {
+            if (this.head == null)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }
